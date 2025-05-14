@@ -78,17 +78,29 @@ mkdir -p ~/.lighthouse
 
 # 创建 Lighthouse 启动脚本
 cat <<EOF > ~/.lighthouse_sepolia.sh
+
 #!/bin/bash
+
 lighthouse bn \\
+
   --network sepolia \\
+  
   --datadir /root/.lighthouse \\
+  
   --execution-endpoint http://127.0.0.1:8551 \\
+  
   --jwt-secrets /root/jwt.hex \\
+  
   --checkpoint-sync-url https://sepolia.checkpoint-sync.ethpandaops.io \\
+  
   --port 9000 \\
+  
   --http \\
+  
   --http-address 0.0.0.0 \\
+  
   --http-port 5052
+  
 EOF
 
 chmod +x ~/.lighthouse_sepolia.sh
