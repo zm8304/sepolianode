@@ -19,22 +19,39 @@ sudo apt install -y geth
 
 # 初始化 Geth Sepolia 网络
 cat <<EOF > ~/.geth_sepolia.sh
+
 #!/bin/bash
+
 geth \\
+
   --sepolia \\
+  
   --syncmode=snap \\
+  
   --cache=12288 \\
+  
   --http \\
+  
   --http.api "eth,net,web3,txpool" \\
+  
   --http.addr "0.0.0.0" \\
+  
   --http.port 8545 \\
+  
   --authrpc.addr localhost \\
+  
   --authrpc.port 8551 \\
+  
   --authrpc.vhosts=* \\
+  
   --authrpc.jwtsecret /root/jwt.hex \\
+  
   --datadir /root/.ethereum \\
+  
   --port 30303
+  
 EOF
+
 
 chmod +x ~/.geth_sepolia.sh
 
@@ -54,7 +71,6 @@ cd lighthouse
 make
 sudo cp target/release/lighthouse /usr/local/bin/
 cd ..
-
 mkdir -p ~/.lighthouse
 
 # 创建 Lighthouse 启动脚本
