@@ -31,6 +31,7 @@ geth \\
   --datadir /root/.ethereum \\
   --port 30303
 EOF
+
 chmod +x ~/.geth_sepolia.sh
 
 # 生成 JWT secret（用于共识层通信）
