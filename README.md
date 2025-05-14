@@ -14,7 +14,9 @@ sudo apt install -y clang libclang-dev llvm-dev
 
 # 安装 Geth
 sudo add-apt-repository -y ppa:ethereum/ethereum
+
 sudo apt update
+
 sudo apt install -y geth
 
 # 初始化 Geth Sepolia 网络
@@ -63,6 +65,7 @@ tmux new-session -d -s geth "~/.geth_sepolia.sh"
 
 # 安装 Rust（用于编译 Lighthouse）
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
 source "$HOME/.cargo/env"
 
 # 安装 Lighthouse
