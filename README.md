@@ -4,9 +4,13 @@ Geth + Lighthouse
 
 # 安装依赖
 sudo apt update && sudo apt install -y curl wget unzip git build-essential
+
 sudo apt update
+
 sudo apt install cmake
+
 sudo apt install -y clang libclang-dev llvm-dev
+
 
 # 安装 Geth
 sudo add-apt-repository -y ppa:ethereum/ethereum
@@ -50,6 +54,7 @@ cd lighthouse
 make
 sudo cp target/release/lighthouse /usr/local/bin/
 cd ..
+
 mkdir -p ~/.lighthouse
 
 # 创建 Lighthouse 启动脚本
