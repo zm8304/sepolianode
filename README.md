@@ -65,6 +65,7 @@ lighthouse bn \
   --http-address 0.0.0.0 \
   --http-port 5052
 EOF
+
 chmod +x ~/.lighthouse_sepolia.sh
 
 # 后台启动 Lighthouse
